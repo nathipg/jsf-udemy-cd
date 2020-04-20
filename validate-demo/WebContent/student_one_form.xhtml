@@ -18,26 +18,35 @@
 	
 		<h:form>
 		
-			<h:messages styleClass="error" />
-		
 			First name: <h:inputText 
 							value="#{studentOne.firstName}"
 							label="First name" />
 							
 			<br /><br />
-							
+					
 			Last name: <h:inputText 
+							id="last_name"
 							value="#{studentOne.lastName}"
 							label="Last name"
-							required="true" />
-							
+							required="true"
+							requiredMessage="Your last name is mandatory" />
+			
+			<h:message 
+				for="last_name"
+				styleClass="error" />
+					
 			<br /><br />
-							
+			
 			Email: <h:inputText 
+						id="email"
 						value="#{studentOne.email}"
 						label="Email"
 						required="true" />
-						
+			
+			<h:message 
+				for="email"
+				styleClass="error" />
+			
 			<br /><br />
 			
 			<h:commandButton
