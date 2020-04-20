@@ -49,6 +49,22 @@
 			
 			<br /><br />
 			
+			Phone number: <h:inputText
+								value="#{studentOne.phoneNumber}"
+								label="Phone Number"
+								id="phone_number"
+								validatorMessage="Phone number must follow xxx-xxx-xxxx">
+								
+								<f:validateRegex pattern="\d{3}-\d{3}-\d{4}" />
+								
+						  </h:inputText>
+			
+			<h:message 
+				for="phone_number"
+				styleClass="error" />
+			
+			<br /><br />
+			
 			Free Passes: <h:inputText
 							value="#{studentOne.freePasses}"
 							label="Free Passes"
