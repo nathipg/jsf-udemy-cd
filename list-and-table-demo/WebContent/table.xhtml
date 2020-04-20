@@ -6,13 +6,17 @@
 
 	<h:head>
 		<title>List</title>
+		
+		<h:outputStylesheet library="css" name="style.css" />
 	</h:head>
 	
 	<h:body>
 		<h:dataTable
 			value="#{studentDataUtil.students}"
 			var="student"
-			border="1">
+			styleClass="table"
+			headerClass="table-header"
+			rowClasses="table-row-odd,table-row-even">
 			
 			<h:column>
 				<f:facet name="header">First Name</f:facet>
